@@ -65,6 +65,19 @@
     .delay-200 { animation-delay: 200ms; }
     .delay-300 { animation-delay: 300ms; }
     .delay-400 { animation-delay: 400ms; }
+
+    @keyframes marquee {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.animate-marquee {
+  animation: marquee 106s linear infinite;
+}
   </style>
 </head>
 <body class="bg-brand-dark text-white font-sans antialiased overflow-x-hidden">
@@ -102,10 +115,65 @@
   }
 </style>
 
-<p class="bg-gradient-to-r from-lime-300 via-yellow-200 to-lime-300 animate-gradient-x text-center text-sm sm:text-lg font-semibold py-2.5 text-black shadow-sm">
-  CKA Training + Openshift Administration Certification at an Unbelievable Price of Just <span class="text-gray-400 line-through text-sm font-medium">₹1,00,000/-</span>
- <span class="font-bold text-red-600 text-lg">₹55,000/-</span>  Only for the first 50 registrations!
-</p>
+<div class="bg-lime-300 overflow-hidden py-2.5 text-gray-900">
+  <div class="flex w-max animate-marquee whitespace-nowrap">
+    <span class="mx-8 font-semibold text-sm sm:text-lg">
+      🚀 CKA + OpenShift Training & Certification at an Unbelievable Price of Just
+      <span class="line-through text-gray-700 font-bold">₹1,00,000/-</span>
+      <span class="text-red-600 font-extrabold text-lg">₹55,000/-</span>
+      🔥 Only for the First 50 Registrations!
+    </span>
+
+    <span class="mx-8 font-semibold text-sm sm:text-lg">
+      🚀 CKA + OpenShift Training & Certification at an Unbelievable Price of Just
+      <span class="line-through text-gray-700 font-bold">₹1,00,000/-</span>
+      <span class="text-red-600 font-extrabold text-lg">₹55,000/-</span>
+      🔥 Only for the First 50 Registrations!
+    </span>
+      <span class="mx-8 font-semibold text-sm sm:text-lg">
+      🚀 CKA + OpenShift Training & Certification at an Unbelievable Price of Just
+      <span class="line-through text-gray-700 font-bold">₹1,00,000/-</span>
+      <span class="text-red-600 font-extrabold text-lg">₹55,000/-</span>
+      🔥 Only for the First 50 Registrations!
+    </span>
+      <span class="mx-8 font-semibold text-sm sm:text-lg">
+      🚀 CKA + OpenShift Training & Certification at an Unbelievable Price of Just
+      <span class="line-through text-gray-700 font-bold">₹1,00,000/-</span>
+      <span class="text-red-600 font-extrabold text-lg">₹55,000/-</span>
+      🔥 Only for the First 50 Registrations!
+    </span>
+      <span class="mx-8 font-semibold text-sm sm:text-lg">
+      🚀 CKA + OpenShift Training & Certification at an Unbelievable Price of Just
+      <span class="line-through text-gray-700 font-bold">₹1,00,000/-</span>
+      <span class="text-red-600 font-extrabold text-lg">₹55,000/-</span>
+      🔥 Only for the First 50 Registrations!
+    </span>
+      <span class="mx-8 font-semibold text-sm sm:text-lg">
+      🚀 CKA + OpenShift Training & Certification at an Unbelievable Price of Just
+      <span class="line-through text-gray-700 font-bold">₹1,00,000/-</span>
+      <span class="text-red-600 font-extrabold text-lg">₹55,000/-</span>
+      🔥 Only for the First 50 Registrations!
+    </span>
+      <span class="mx-8 font-semibold text-sm sm:text-lg">
+      🚀 CKA + OpenShift Training & Certification at an Unbelievable Price of Just
+      <span class="line-through text-gray-700 font-bold">₹1,00,000/-</span>
+      <span class="text-red-600 font-extrabold text-lg">₹55,000/-</span>
+      🔥 Only for the First 50 Registrations!
+    </span>
+      <span class="mx-8 font-semibold text-sm sm:text-lg">
+      🚀 CKA + OpenShift Training & Certification at an Unbelievable Price of Just
+      <span class="line-through text-gray-700 font-bold">₹1,00,000/-</span>
+      <span class="text-red-600 font-extrabold text-lg">₹55,000/-</span>
+      🔥 Only for the First 50 Registrations!
+    </span>
+      <span class="mx-8 font-semibold text-sm sm:text-lg">
+      🚀 CKA + OpenShift Training & Certification at an Unbelievable Price of Just
+      <span class="line-through text-gray-700 font-bold">₹1,00,000/-</span>
+      <span class="text-red-600 font-extrabold text-lg">₹55,000/-</span>
+      🔥 Only for the First 50 Registrations!
+    </span>
+  </div>
+</div>
   <section class="grid grid-cols-1 md:grid-cols-[40%_60%] h:fit md:min-h-screen w-full">
         
 
@@ -125,7 +193,7 @@
   </div>
       <!-- Updated Content -->
       <h1 class="text-3xl md:text-[2.5rem] lg:text-[2.75rem] font-medium leading-[1.15] tracking-tight mb-6">
-        Master <span class="text-brand-lime">CKA Training + Openshift Administration</span> Certifications in 10 Weeks
+        Master <span class="text-brand-lime">CKA + Openshift</span> Training & Certifications in 10 Weeks
       </h1>
    <div class="flex flex-wrap items-center gap-y-3 gap-x-4 mb-12 max-w-[95%]">
   <!-- Certification Badge -->
@@ -241,7 +309,7 @@
   </div>
 
   <!-- OpenShift Floating Logo -->
-  <div class="absolute top-24 right-48 z-20 hidden md:flex animate-float-delayed">
+  <div class="absolute top-48 right-20 z-20 hidden md:flex animate-float-delayed">
     <div class="w-24 h-24  bg-white/10 backdrop-blur-lg border border-white/20 shadow-2xl p-3">
       <img
         src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/3a/OpenShift-LogoType.svg/1920px-OpenShift-LogoType.svg.png"
@@ -291,7 +359,7 @@
         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9m-9 9a9 9 0 019-9"></path>
       </svg>
       <div class="text-3xl md:text-[2.5rem] font-medium text-black mb-4 tracking-tight leading-none">
-        Save ₹20-30K
+        Save ₹40-50K
       </div>
       <div class="text-gray-500 text-[15px] font-medium leading-relaxed">
         Get both certifications for less than buying separately.
@@ -389,7 +457,7 @@
             </div>
             <div>
               <h4 class="font-semibold text-base mb-1">Certification</h4>
-              <p class="text-sm text-gray-500 leading-relaxed">Comprehensive study methodologies for the official Linux Foundation CKA and CKAD certifications.</p>
+              <p class="text-sm text-gray-500 leading-relaxed">Comprehensive study methodologies for the official Linux Foundation CKA certifications.</p>
             </div>
           </div>
               <div class="flex items-start gap-5 border-b border-gray-100 pb-6">
