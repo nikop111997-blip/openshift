@@ -35,6 +35,22 @@
     }
   </script>
   <style>
+    @keyframes float {
+  0%,100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-12px);
+  }
+}
+
+.animate-float {
+  animation: float 5s ease-in-out infinite;
+}
+
+.animate-float-delayed {
+  animation: float 5s ease-in-out infinite 2s;
+}
     @keyframes fadeInUp {
       0% { opacity: 0; transform: translateY(30px); }
       100% { opacity: 1; transform: translateY(0); }
@@ -204,22 +220,44 @@
     </div>
 
     <!-- Right Image Column -->
-    <div class="relative w-full h-0 md:h-full overflow-hidden">
-      <!-- High-quality placeholder matching the lighting/mood -->
-     <img
-  src="https://images.pexels.com/photos/7316743/pexels-photo-7316743.jpeg"
-  alt="Student looking forward"
- class="absolute inset-0 w-full h-full object-cover object-[center_30%] -scale-x-100 hidden md:block"
-/>
-      
-      <!-- Fade Gradient Overlay -->
-      <!-- Reduced the intensity of the gradient on desktop so the image stays brighter -->
-      <div class="absolute inset-0 bg-gradient-to-b from-brand-dark via-brand-dark/20 to-transparent md:bg-gradient-to-r md:from-brand-dark md:via-brand-dark/10 md:to-transparent z-0 pointer-events-none"></div>
+  <!-- Right Image Column -->
+<div class="relative w-full h-0 md:h-full overflow-hidden">
 
-      <!-- Bottom Fade Overlay to ensure tags are always readable -->
-      <div class="absolute inset-x-0 bottom-0 h-1/2 bg-gradient-to-t from-brand-dark/90 to-transparent z-0 pointer-events-none"></div>
-      
+  <img
+    src="https://images.pexels.com/photos/7316743/pexels-photo-7316743.jpeg"
+    alt="Student looking forward"
+    class="absolute inset-0 w-full h-full object-cover object-[center_30%] -scale-x-100 hidden md:block"
+  />
+
+  <!-- Kubernetes Floating Logo -->
+  <div class="absolute top-20 right-20 z-20 hidden md:flex animate-float">
+    <div class="w-24 h-24  bg-white/10 backdrop-blur-lg border border-white/20 shadow-2xl p-3">
+      <img
+        src="https://upload.wikimedia.org/wikipedia/commons/3/39/Kubernetes_logo_without_workmark.svg"
+        alt="Kubernetes"
+        class="w-full h-full object-contain"
+      />
     </div>
+  </div>
+
+  <!-- OpenShift Floating Logo -->
+  <div class="absolute top-24 right-48 z-20 hidden md:flex animate-float-delayed">
+    <div class="w-24 h-24  bg-white/10 backdrop-blur-lg border border-white/20 shadow-2xl p-3">
+      <img
+        src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/3a/OpenShift-LogoType.svg/1920px-OpenShift-LogoType.svg.png"
+        alt="OpenShift"
+        class="w-full h-full object-contain"
+      />
+    </div>
+  </div>
+
+  <!-- Fade Gradient Overlay -->
+  <div class="absolute inset-0 bg-gradient-to-b from-brand-dark via-brand-dark/20 to-transparent md:bg-gradient-to-r md:from-brand-dark md:via-brand-dark/10 md:to-transparent z-0 pointer-events-none"></div>
+
+  <!-- Bottom Fade -->
+  <div class="absolute inset-x-0 bottom-0 h-1/2 bg-gradient-to-t from-brand-dark/90 to-transparent z-0 pointer-events-none"></div>
+
+</div>
     
   </section>
 <!-- Main Container (Sharp corners, 1px borders) -->
@@ -576,7 +614,7 @@
         <ul class="space-y-4">
           <li class="flex items-start text-gray-700 font-medium text-sm md:text-base">
             <svg class="w-5 h-5 text-gray-900 mr-3 shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg>
-            Self-paced videos
+            Live instructor-led training
           </li>
           <li class="flex items-start text-gray-700 font-medium text-sm md:text-base">
             <svg class="w-5 h-5 text-gray-900 mr-3 shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg>
@@ -629,7 +667,7 @@
           </li>
           <li class="flex items-start text-gray-300 font-medium text-sm md:text-base">
             <svg class="w-5 h-5 text-[#CCFF00] mr-3 shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg>
-            Self-paced videos + Exams
+            Live instructor-led training + Exams
           </li>
           <li class="flex items-start text-gray-300 font-medium text-sm md:text-base">
             <svg class="w-5 h-5 text-[#CCFF00] mr-3 shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg>
@@ -1597,23 +1635,23 @@
     &copy; 2026 GRRAS Solutions. All rights reserved.
   </div>
 </footer>
-<div id="popup-modal" class="fixed inset-0 bg-black/60 z-50 hidden items-center justify-center p-4 opacity-0 transition-opacity duration-300">
+<div id="popup-modal" class="fixed inset-0 bg-black/60 z-50 hidden items-center justify-center opacity-0 transition-opacity duration-300">
     
     <!-- Modal Content -->
-    <div id="popup-content" class="bg-white  flex flex-col md:flex-row w-full max-w-5xl shadow-2xl transform scale-95 transition-transform duration-300 relative overflow-hidden">
+    <div id="popup-content" class="bg-white flex flex-col md:flex-row w-full max-w-5xl shadow-2xl transform scale-95 transition-transform duration-300 relative overflow-hidden">
       
       <!-- Left Side: Image & Overlay -->
        <div class="w-full md:w-1/2 hidden sm:block">
-     <div class=" h-[650px] md:elative">
+     <div class=" relative">
     <img
-      src="https://images.pexels.com/photos/5685951/pexels-photo-5685951.jpeg"
+      src="offer.jpeg"
       alt="Student"
       class="w-full h-full object-cover "
     />
   </div>
 </div>
       <!-- Right Side: Form -->
-      <div class="w-full md:w-1/2 p-8 md:p-12 relative flex flex-col justify-center">
+      <div class="w-full md:w-1/2 p-8 md:pt-12 relative flex flex-col justify-center">
         
         <!-- Close Button -->
         <button id="close-popup" class="absolute top-6 right-6 bg-gray-100 text-gray-500 rounded-full w-10 h-10 flex items-center justify-center hover:bg-gray-200 hover:text-gray-800 transition-colors">
@@ -1673,104 +1711,7 @@
   </div>
   
 </section>
-<!-- Exit Intent Popup Overlay -->
-<div id="exitPopup" class="fixed inset-0 z-[100] hidden bg-black/60 backdrop-blur-sm flex items-center justify-center p-4 transition-opacity duration-300 opacity-0">
-  
-  <!-- Popup Modal -->
-  <div class="bg-white rounded-2xl shadow-2xl max-w-md w-full p-8 relative transform scale-95 transition-transform duration-300">
-    
-    <!-- Close Button -->
-    <button id="closePopupBtn" class="absolute top-4 right-4 text-gray-400 hover:text-gray-900 transition-colors bg-gray-50 hover:bg-gray-100 rounded-full p-1.5 focus:outline-none">
-      <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
-      </svg>
-    </button>
-    
-    <!-- Icon -->
-    <div class="w-16 h-16 bg-red-100 rounded-full flex items-center justify-center mx-auto mb-5">
-      <svg class="w-8 h-8 text-red-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4m0 4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
-      </svg>
-    </div>
-    
-    <!-- Content -->
-    <div class="text-center">
-      <h2 class="text-3xl font-extrabold text-gray-900 mb-2 tracking-tight">Wait!</h2>
-      <p class="text-gray-600 mb-6 text-lg">
-        Don't leave without your special offer. Get a <span class="font-bold text-red-600 bg-red-50 px-2 py-0.5 rounded">₹5,000 discount</span> if you enroll today!
-      </p>
-      
-      <!-- Call to Action -->
-      <a href="/enroll" class="block w-full bg-[#dc2626] hover:bg-[#b91c1c] text-white font-bold py-3.5 px-6 rounded-lg transition-colors duration-200 shadow-md hover:shadow-lg">
-        Claim My ₹50K Discount Now
-      </a>
-      
-      <button id="declineOfferBtn" class="mt-4 text-sm text-gray-400 hover:text-gray-600 underline font-medium focus:outline-none">
-        No thanks, I'll pay full price later
-      </button>
-    </div>
 
-  </div>
-</div>
-
-<script>
-  document.addEventListener('DOMContentLoaded', () => {
-    const popup = document.getElementById('exitPopup');
-    const modal = popup.querySelector('.bg-white');
-    const closeBtn = document.getElementById('closePopupBtn');
-    const declineBtn = document.getElementById('declineOfferBtn');
-    
-    // Check if we've already shown the popup in this session
-    const hasShownPopup = sessionStorage.getItem('exitIntentShown');
-
-    const showPopup = () => {
-      popup.classList.remove('hidden');
-      // Small delay to allow display:block to apply before animating opacity/transform
-      setTimeout(() => {
-        popup.classList.remove('opacity-0');
-        modal.classList.remove('scale-95');
-        modal.classList.add('scale-100');
-      }, 10);
-      sessionStorage.setItem('exitIntentShown', 'true');
-    };
-
-    const closePopup = () => {
-      popup.classList.add('opacity-0');
-      modal.classList.remove('scale-100');
-      modal.classList.add('scale-95');
-      // Wait for transition to finish before hiding
-      setTimeout(() => {
-        popup.classList.add('hidden');
-      }, 300);
-    };
-
-    // Trigger on mouse leave (moving out of the top of the window)
-    document.addEventListener('mouseleave', (e) => {
-      // Check if mouse is heading towards the address bar (clientY < 10)
-      if (e.clientY < 10 && !sessionStorage.getItem('exitIntentShown')) {
-        showPopup();
-      }
-    });
-
-    // Close Event Listeners
-    closeBtn.addEventListener('click', closePopup);
-    declineBtn.addEventListener('click', closePopup);
-
-    // Close on clicking outside the modal box
-    popup.addEventListener('click', (e) => {
-      if (e.target === popup) {
-        closePopup();
-      }
-    });
-    
-    // Close on Escape key
-    document.addEventListener('keydown', (e) => {
-      if (e.key === 'Escape' && !popup.classList.contains('hidden')) {
-        closePopup();
-      }
-    });
-  });
-</script>
 <script>
   // Set the target date (September 1, 2026 at 00:00:00)
   const countDownDate = new Date("Sep 1, 2026 00:00:00").getTime();
